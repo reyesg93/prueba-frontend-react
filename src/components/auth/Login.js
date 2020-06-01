@@ -18,7 +18,7 @@ export const Login = () => {
 
 		AuthService.login(user)
 		.then(() => {
-			history.push('/perfil');
+			history.push('/tickets');
 			window.location.reload();
 		})
 		.catch((err) => {
