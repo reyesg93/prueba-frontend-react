@@ -9,7 +9,7 @@ const useTicketCollection = () => {
 	const user = AuthService.getInfoUser();
 	const [listUsuarios, setListUsuarios] = useState([]);
 	const [listTicket, setListTicket] = useState([]);
-	//const [ticket, setTicket] = useState('');
+	
 
 	const [ticket, setTicket] = useState('');
 	const [usuario, setUsuario] = useState('');
@@ -130,14 +130,14 @@ export const Ticket = () => {
 					<input type="hidden" value={idticket} />
 					<div className="col-lg-6">
 						<div className="form-group">
-					    	<label><h1>Ticket   {ticket}</h1></label>
+					    	<label><h1>Ticket  </h1></label>
 					    	<input type="text" value={ticket} onChange={(e)=>setTicket(e.target.value)}  className="form-control" placeholder=""/>
 						</div>
 					</div>
 
 					<div className="col-lg-6">
 						<div className="form-group">
-					    	<label><h1>Usuario {usuario}</h1></label>
+					    	<label><h1>Usuario </h1></label>
 					    	<select className="form-control" value={usuario} onChange={(e)=>setUsuario(e.target.value)}>
 					    		<option>Seleccione..</option>
 					    		{listUsuarios.map((usuario, index) => {
